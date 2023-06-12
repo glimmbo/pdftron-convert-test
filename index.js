@@ -21,8 +21,8 @@ module.exports.handler = async (event) => {
 
     const doc = await PDFNet.PDFDoc.create();
     const page = await doc.pageCreate();
-    doc.pagePushBack(page);
-    doc.save("blank.pdf", PDFNet.SDFDoc.SaveOptions.e_linearized);
+    await doc.pagePushBack(page);
+    await doc.save("blank.pdf", PDFNet.SDFDoc.SaveOptions.e_linearized);
   };
 
   await PDFNet.runWithCleanup(
