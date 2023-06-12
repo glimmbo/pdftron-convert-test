@@ -1,0 +1,15 @@
+GET / (λ: api)
+FATAL ERROR: HandleScope::HandleScope Entering the V8 API without proper locking in place
+ 1: 0x1003fd4fc node::Abort() [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+ 2: 0x1003fd5f4 node::OOMErrorHandler(char const*, bool) [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+ 3: 0x1005552b8 v8::HandleScope::HandleScope(v8::Isolate*) [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+ 4: 0x10f0def8c pdftron::(anonymous namespace)::OnMessage(uv_async_s*) [/Users/glimm/Desktop/pdftron-convert-test/node_modules/@pdftron/pdfnet-node/lib/addon.node]
+ 5: 0x100d1c800 uv__async_io [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+ 6: 0x100d2efa4 uv__io_poll [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+ 7: 0x100d1ccd0 uv_run [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+ 8: 0x10034d6f4 node::SpinEventLoop(node::Environment*) [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+ 9: 0x10043a8ec node::NodeMainInstance::Run() [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+10: 0x1003ca028 node::LoadSnapshotDataAndRun(node::SnapshotData const**, node::InitializationResult const*) [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+11: 0x1003ca2b4 node::Start(int, char**) [/Users/glimm/.nvm/versions/node/v18.16.0/bin/node]
+12: 0x19ee07e50 start [/usr/lib/dyld]
+zsh: abort      sls offline
